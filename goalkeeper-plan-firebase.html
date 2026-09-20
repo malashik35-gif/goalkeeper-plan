@@ -811,8 +811,34 @@ body:not(.can-edit) .note-del{display:none!important}
         <!-- В1 Вторник -->
         <div class="session-card" id="w1-vt">
           <div class="session-head">
-            <div><div class="session-day">Вторник</div><div class="session-type">Ловля + работа ног</div><div class="session-date">22 сентября 2026</div></div>
+            <div><div class="session-day">Вторник</div><div class="session-type">Адаптация — первое знакомство с паркетом</div><div class="session-date">22 сентября 2026</div></div>
             <div class="session-dur">40 мин</div>
+          </div>
+
+          <!-- ПУНКТ 0 -->
+          <div class="exercise open">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">до начала</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Бег и беговые с полевыми</span>
+              <span class="exercise-tag">Общая работа</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Вратари выполняют общую беговую разминку вместе с командой</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага...">Бег в общем объёме с полевыми игроками: лёгкий бег, ускорения, беговые упражнения (захлёст, высокое бедро, приставной). Темп и объём — по плану тренера команды.</div></div>
+              </div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
           </div>
 
           <!-- РАЗМИНКА -->
@@ -824,7 +850,7 @@ body:not(.can-edit) .note-del{display:none!important}
               <span class="exercise-chevron">▾</span>
             </div>
             <div class="exercise-body">
-              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Активируем суставы, включаем мяч в руки</div>
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Активируем суставы, включаем мяч в руки — без давления, первое знакомство</div>
               <div class="steps">
                 <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>2 мин — суставная гимнастика:</strong> вращения запястий, плеч, бёдер, голеностопа стоя. На паркете голеностоп нагружается иначе — не торопиться</div></div>
                 <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>3 мин — броски в парах с 5 м:</strong> вратари стоят друг напротив друга, перебрасывают мяч руками — верхом, снизу, сбоку. Просто ловят и сразу возвращают. Темп спокойный.</div></div>
@@ -905,13 +931,68 @@ body:not(.can-edit) .note-del{display:none!important}
         </div>
       </div></div></div>
           </div>
+
+          <!-- СКР -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">заминка</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">СКР — самоконтроль и саморегуляция</span>
+              <span class="exercise-tag">Психология</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">15–20 секунд: проверяем состояние тела и возвращаемся в рабочий режим</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>После завершения работы:</strong> встать, остановиться на 15–20 секунд. Задать себе три вопроса: «Мышцы — зажаты или расслаблены?», «Дыхание — ровное или задержанное?», «Выражение лица — напряжённое или нейтральное?»</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Если есть напряжение:</strong> расслабить мышцы (встряхнуть руки и плечи), улыбнуться — это физически снимает мышечный тонус лица, затем 2–3 глубоких вдоха с удлинённым выдохом: вдох 3 сек → выдох 5 сек.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Ритмичное дыхание (если нужно):</strong> вдох → задержка 2 сек → выдох длиннее вдоха. Повторить 3–4 раза. Это сигнал нервной системе: «ситуация под контролем». Навык применять и в матче — особенно после пропущенного гола.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">СКР — это не расслабление, это управление. Вратарь которая умеет быстро вернуться в рабочее состояние — стабильнее на протяжении всей игры.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
         </div>
 
         <!-- В1 Четверг -->
         <div class="session-card" id="w1-chet">
           <div class="session-head">
-            <div><div class="session-day">Четверг</div><div class="session-type">Падения + реакция</div><div class="session-date">24 сентября 2026</div></div>
+            <div><div class="session-day">Четверг</div><div class="session-type">Начало нагрузки — падения + реакция</div><div class="session-date">24 сентября 2026</div></div>
             <div class="session-dur">40 мин</div>
+          </div>
+
+          <!-- ПУНКТ 0 -->
+          <div class="exercise open">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">до начала</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Бег и беговые с полевыми</span>
+              <span class="exercise-tag">Общая работа</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Вратари выполняют общую беговую разминку вместе с командой</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага...">Бег в общем объёме с полевыми игроками: лёгкий бег, ускорения, беговые упражнения (захлёст, высокое бедро, приставной). Темп и объём — по плану тренера команды.</div></div>
+              </div>
+              <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
           </div>
 
           <div class="exercise open">
@@ -987,6 +1068,35 @@ body:not(.can-edit) .note-del{display:none!important}
                 <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>13 мин — серия 3 мяча:</strong> тренер бьёт с паузой 4 сек: <em>низ → верх → любой.</em> Вратарь после каждого мяча встаёт, в стойку, готова. × 5 серий на каждую. Пауза между сериями 20 сек.</div></div>
               </div>
               <div class="tip"><span class="tip-icon">💡</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">Не смотреть, куда улетел мяч. Поймала/отбила — сразу взгляд вперёд, стойка.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
+
+          <!-- СКР -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">заминка</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">СКР — самоконтроль и саморегуляция</span>
+              <span class="exercise-tag">Психология</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">15–20 секунд: проверяем состояние тела и возвращаемся в рабочий режим</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>После завершения работы:</strong> встать, остановиться на 15–20 секунд. Задать себе три вопроса: «Мышцы — зажаты или расслаблены?», «Дыхание — ровное или задержанное?», «Выражение лица — напряжённое или нейтральное?»</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Если есть напряжение:</strong> расслабить мышцы (встряхнуть руки и плечи), улыбнуться — это физически снимает мышечный тонус лица, затем 2–3 глубоких вдоха с удлинённым выдохом: вдох 3 сек → выдох 5 сек.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Ритмичное дыхание (если нужно):</strong> вдох → задержка 2 сек → выдох длиннее вдоха. Повторить 3–4 раза. Это сигнал нервной системе: «ситуация под контролем». Навык применять и в матче — особенно после пропущенного гола.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">СКР — это не расслабление, это управление. Вратарь которая умеет быстро вернуться в рабочее состояние — стабильнее на протяжении всей игры.</span></div>
             <div class="notes-section">
       <button class="add-note-btn" onclick="openNoteForm(this)">
         <span>📌</span> Добавить пометку
@@ -1113,8 +1223,34 @@ body:not(.can-edit) .note-del{display:none!important}
         <!-- В2 Вторник -->
         <div class="session-card" id="w2-vt">
           <div class="session-head">
-            <div><div class="session-day">Вторник</div><div class="session-type">Скорость + выносливость</div><div class="session-date">29 сентября 2026</div></div>
-            <div class="session-dur">40 мин</div>
+            <div><div class="session-day">Вторник</div><div class="session-type">Полная нагрузка — скорость + игра ногами</div><div class="session-date">29 сентября 2026</div></div>
+            <div class="session-dur">50 мин</div>
+          </div>
+
+          <!-- ПУНКТ 0 -->
+          <div class="exercise open">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">до начала</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Бег и беговые с полевыми</span>
+              <span class="exercise-tag">Общая работа</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Вратари выполняют общую беговую разминку вместе с командой</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага...">Бег в общем объёме с полевыми игроками: лёгкий бег, ускорения, беговые упражнения (захлёст, высокое бедро, приставной). Темп и объём — по плану тренера команды.</div></div>
+              </div>
+              <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
           </div>
 
           <div class="exercise open">
@@ -1199,13 +1335,124 @@ body:not(.can-edit) .note-del{display:none!important}
         </div>
       </div></div></div>
           </div>
+
+          <!-- АНТИЦИПАЦИЯ -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">40–47</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Антиципация — читай нападающего</span>
+              <span class="exercise-tag">Ситуативное</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: держать позицию и читать опорную ногу — не реагировать на финт, а видеть факты</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Упражнение «Читай нападающего»:</strong> второй вратарь разбегается и делает финт в одну сторону, удар — в другую. Задача первой вратарки: не двигаться на финт, удерживать позицию и читать <em>опорную ногу</em> — куда носок опорной, туда мяч. × 3–4 серии по 6 повторений. Пауза между сериями 15 сек. После каждого повторения — тренер спрашивает: «Куда смотрела?»</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">Финт — это обман. Опорная нога — это правда. Тренируем смотреть на правду, а не на обман.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
+
+          <!-- ИГРА НОГАМИ после нагрузки -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">47–57</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Игра ногами после нагрузки</span>
+              <span class="exercise-tag">Игра ногами</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: точность передач в условиях усталости — именно так это происходит в игре</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>3 мин — удары внутренней стопой в парах с 12 м:</strong> принять мяч — остановить — вернуть точно партнёру. Темп спокойный, акцент на точность. Уставшее тело не прощает неаккуратного удара — это и есть задача.</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>4 мин — выбивание с рук на точность:</strong> вратарь берёт мяч в руки, выбивает партнёрке в ноги с 16–18 м. Партнёрка принимает и возвращает. Акцент: не сила — попасть в зону. × 6 каждой.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>3 мин — пас в движении:</strong> одна бежит к конусу в 6 м, разворачивается — вторая даёт мяч под ход. Принять в движении и сразу вернуть. Меняются через 4 повторения.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">💡</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">После нагрузки тело хочет торопиться или расслабиться — оба варианта ломают технику. Держим рабочий ритм, не торопимся.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
+
+          <!-- СКР -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">заминка</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">СКР — самоконтроль и саморегуляция</span>
+              <span class="exercise-tag">Психология</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">15–20 секунд: проверяем состояние тела и возвращаемся в рабочий режим</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>После завершения работы:</strong> встать, остановиться на 15–20 секунд. Задать себе три вопроса: «Мышцы — зажаты или расслаблены?», «Дыхание — ровное или задержанное?», «Выражение лица — напряжённое или нейтральное?»</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Если есть напряжение:</strong> расслабить мышцы (встряхнуть руки и плечи), улыбнуться — это физически снимает мышечный тонус лица, затем 2–3 глубоких вдоха с удлинённым выдохом: вдох 3 сек → выдох 5 сек.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Ритмичное дыхание (если нужно):</strong> вдох → задержка 2 сек → выдох длиннее вдоха. Повторить 3–4 раза. Это сигнал нервной системе: «ситуация под контролем». Навык применять и в матче — особенно после пропущенного гола.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">СКР — это не расслабление, это управление. Вратарь которая умеет быстро вернуться в рабочее состояние — стабильнее на протяжении всей игры.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
         </div>
 
         <!-- В2 Четверг -->
         <div class="session-card" id="w2-chet">
           <div class="session-head">
-            <div><div class="session-day">Четверг</div><div class="session-type">Игра ногами под давлением</div><div class="session-date">1 октября 2026</div></div>
-            <div class="session-dur">40 мин</div>
+            <div><div class="session-day">Четверг</div><div class="session-type">Нагрузка + работа с мячом</div><div class="session-date">1 октября 2026</div></div>
+            <div class="session-dur">50 мин</div>
+          </div>
+
+          <!-- ПУНКТ 0 -->
+          <div class="exercise open">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">до начала</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Бег и беговые с полевыми</span>
+              <span class="exercise-tag">Общая работа</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Вратари выполняют общую беговую разминку вместе с командой</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага...">Бег в общем объёме с полевыми игроками: лёгкий бег, ускорения, беговые упражнения (захлёст, высокое бедро, приставной). Темп и объём — по плану тренера команды.</div></div>
+              </div>
+              <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
           </div>
 
           <div class="exercise open">
@@ -1276,6 +1523,91 @@ body:not(.can-edit) .note-del{display:none!important}
                 <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>× 8 эпизодов на каждого вратаря.</strong> Последние 5 мин: тренер бьёт вразнобой без предупреждения куда — вратарь реагирует.</div></div>
               </div>
               <div class="tip"><span class="tip-icon">💡</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">После удара ногой не расслабляться — сразу вернуться в стойку. В матче так и будет.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
+
+          <!-- АНТИЦИПАЦИЯ -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">40–47</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Антиципация — удар из-за укрытия</span>
+              <span class="exercise-tag">Ситуативное</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: реагировать на момент выхода нападающего, а не ждать удара</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Упражнение «Удар из-за укрытия»:</strong> конус ставится в 10–12 м от ворот. Второй вратарь прячется за конус с мячом — первая стоит в воротах и не видит мяча. Нападающий выходит из-за укрытия и сразу бьёт без паузы. Вратарь обязана принять стойку готовности в момент появления нападающего — не ждать замаха. × 3 серии по 5 повторений. Менять сторону выхода.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">⚠️</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">Типичная ошибка — расслабиться пока нападающий не виден. Правило: «Не вижу мяч — значит опасность». Всегда в стойке готовности.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
+
+          <!-- РАБОТА С МЯЧОМ после нагрузки -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">47–57</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Работа с мячом после нагрузки</span>
+              <span class="exercise-tag">Работа с мячом</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: ловля и отбивы в условиях усталости — работаем над техникой когда тяжело</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>4 мин — ловля из-за усталости:</strong> тренер бьёт средней силы в разные зоны (без серий, с паузой 5 сек). Вратарь ловит и сразу возвращает. Акцент: руки впереди тела, не сзади. × 10 на каждую.</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>3 мин — выход на прострел:</strong> тренер катит мяч вдоль ворот справа и слева — вратарь выходит на перехват, накрывает двумя руками. × 6 с каждой стороны. Темп — рабочий, не форсируем.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>3 мин — навесы от угла:</strong> тренер навешивает с угла поля, вратарь выбирает — ловить или кулаком. После каждого действия — вслух: «мяч мой» или «выбиваю». Осознанность + голос.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">💡</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">Когда устала — первое что страдает это движение рук навстречу мячу. Следи: руки вперёд, не жди мяч у груди.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
+
+          <!-- СКР -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">заминка</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">СКР — самоконтроль и саморегуляция</span>
+              <span class="exercise-tag">Психология</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">15–20 секунд: проверяем состояние тела и возвращаемся в рабочий режим</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>После завершения работы:</strong> встать, остановиться на 15–20 секунд. Задать себе три вопроса: «Мышцы — зажаты или расслаблены?», «Дыхание — ровное или задержанное?», «Выражение лица — напряжённое или нейтральное?»</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Если есть напряжение:</strong> расслабить мышцы (встряхнуть руки и плечи), улыбнуться — это физически снимает мышечный тонус лица, затем 2–3 глубоких вдоха с удлинённым выдохом: вдох 3 сек → выдох 5 сек.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Ритмичное дыхание (если нужно):</strong> вдох → задержка 2 сек → выдох длиннее вдоха. Повторить 3–4 раза. Это сигнал нервной системе: «ситуация под контролем». Навык применять и в матче — особенно после пропущенного гола.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">СКР — это не расслабление, это управление. Вратарь которая умеет быстро вернуться в рабочее состояние — стабильнее на протяжении всей игры.</span></div>
             <div class="notes-section">
       <button class="add-note-btn" onclick="openNoteForm(this)">
         <span>📌</span> Добавить пометку
@@ -1401,8 +1733,34 @@ body:not(.can-edit) .note-del{display:none!important}
         <!-- В3 Вторник -->
         <div class="session-card" id="w3-vt">
           <div class="session-head">
-            <div><div class="session-day">Вторник</div><div class="session-type">Сложные эпизоды</div><div class="session-date">6 октября 2026</div></div>
+            <div><div class="session-day">Вторник</div><div class="session-type">Качество — технически сложные эпизоды</div><div class="session-date">6 октября 2026</div></div>
             <div class="session-dur">40 мин</div>
+          </div>
+
+          <!-- ПУНКТ 0 -->
+          <div class="exercise open">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">до начала</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Бег и беговые с полевыми</span>
+              <span class="exercise-tag">Общая работа</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Вратари выполняют общую беговую разминку вместе с командой</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага...">Бег в общем объёме с полевыми игроками: лёгкий бег, ускорения, беговые упражнения (захлёст, высокое бедро, приставной). Темп и объём — по плану тренера команды.</div></div>
+              </div>
+              <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
           </div>
 
           <div class="exercise open">
@@ -1413,7 +1771,7 @@ body:not(.can-edit) .note-del{display:none!important}
               <span class="exercise-chevron">▾</span>
             </div>
             <div class="exercise-body">
-              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Полная разминка — неделя на максимальную нагрузку</div>
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Осознанная разминка — неделя на качество и детали исполнения</div>
               <div class="steps">
                 <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>2 мин:</strong> суставная гимнастика от головы вниз.</div></div>
                 <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>3 мин:</strong> приставные шаги + лёгкие прыжки в стойку × 10.</div></div>
@@ -1435,22 +1793,18 @@ body:not(.can-edit) .note-del{display:none!important}
           <div class="exercise">
             <div class="exercise-head" onclick="toggle(this)">
               <span class="exercise-time">7–20</span>
-              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Удары с ближней дистанции</span>
-              <span class="exercise-tag">Подводящее</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Позиционирование при угловом — детальный разбор</span>
+              <span class="exercise-tag">Технически сложное</span>
               <span class="exercise-chevron">▾</span>
             </div>
             <div class="exercise-body">
-              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: закрывать ворота телом, не угадывать угол</div>
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: точная стартовая позиция, маршрут выхода, момент прыжка — разобрать каждую фазу отдельно</div>
               <div class="steps">
-                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>6 мин — Упражнение «Стенка»:</strong> вратарь выходит из ворот в 6–8 м и изображает живую стенку — руки вверх, тело вперёд, закрывает нижний угол. Тренер пробивает поверх или обходит низом. Вратарь держит позицию до удара, потом реагирует на незакрытое.</div></div>
-                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>7 мин — добивание:</strong> тренер бьёт с 14 м → вратарь отбивает → тренер сразу добегает и бьёт с 4–6 м с ходу. После первого отбива — не падать, не замирать, сразу стойка шире, руки раскрыть.</div></div>
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Фаза 1 — стартовая позиция (3 мин):</strong> при подаче углового вратарь встаёт у ближней штанги на расстоянии вытянутой руки. Тренер проверяет: угол к мячу, вес на носках, руки немного разведены. Отрабатываем только вставание в позицию, без мяча. × 6 раз каждая.</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Фаза 2 — маршрут выхода (4 мин):</strong> тренер обозначает точку приземления мяча. Вратарь проходит маршрут пешком: старт → два шага вперёд и чуть правее → прыжок → поймать. После каждого прохода — тренер говорит «на шаг раньше» или «хорошо». Без спешки.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Фаза 3 — с подачей (6 мин):</strong> тренер навешивает с угла, вратарь применяет разобранный маршрут. Полная пауза после каждого мяча — вратарь называет: «вышла рано / поздно / вовремя». Только 4–5 мячей на каждую — качество, не количество.</div></div>
               </div>
-              <div class="reps-row">
-                <span class="rep-chip">× 12 ударов</span>
-                <span class="rep-chip">× 8 добиваний</span>
-                <span class="rep-chip">меняются</span>
-              </div>
-              <div class="tip"><span class="tip-icon">⚠️</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">На ближней дистанции позиция важнее реакции. Быть большой — главная задача.</span></div>
+              <div class="tip"><span class="tip-icon">⚠️</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">На этой неделе нет объёма — каждый мяч разбираем. Тренер может остановить вратаря прямо в прыжке (объяснить руками) — это нормально и нужно.</span></div>
             <div class="notes-section">
       <button class="add-note-btn" onclick="openNoteForm(this)">
         <span>📌</span> Добавить пометку
@@ -1467,18 +1821,74 @@ body:not(.can-edit) .note-del{display:none!important}
           <div class="exercise">
             <div class="exercise-head" onclick="toggle(this)">
               <span class="exercise-time">20–40</span>
-              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Выходы 1в1 + серия после пропущенного</span>
-              <span class="exercise-tag">Основное</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Выход 1в1 — четыре фазы решения</span>
+              <span class="exercise-tag">Технически сложное</span>
               <span class="exercise-chevron">▾</span>
             </div>
             <div class="exercise-body">
-              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: решительность и психологическое восстановление</div>
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: осознанное принятие решения в каждой фазе — не «как получилось», а «почему так»</div>
               <div class="steps">
-                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>10 мин — выходы 1в1:</strong> второй вратарь разбегается от центра — первый выходит навстречу. Занять позицию в 5–6 м, раскрыть руки, ждать момента. Не падать заранее. × 8 эпизодов на каждую.</div></div>
-                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>10 мин — серия после пропущенного:</strong> тренер намеренно даёт вратарю пропустить мяч → через 3 сек сразу бьёт следующий. Задача: слово «дальше» вслух — и мгновенное включение. × 6 эпизодов на каждую.</div></div>
-                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>После каждой смены:</strong> тренер спрашивает «что почувствовала после пропущенного?». Вратарь отвечает вслух. Это начало работы с психологией.</div></div>
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Разбор четырёх фаз (5 мин, без мяча):</strong> тренер объясняет и показывает: (1) момент выхода — когда нападающий пересёк линию, (2) траектория — прямо к мячу, не к нападающему, (3) остановка — на расстоянии 2 м, не прыгать заранее, (4) момент броска — по стопе нападающего. Вратарь повторяет шаги пешком.</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Практика с замедлением (10 мин):</strong> второй вратарь бежит с мячом в полскорости. Первая применяет все четыре фазы. После каждого эпизода — тренер и вратарь вместе называют какая из фаз была правильной, какая нет. × 5 эпизодов на каждую.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Практика в полную скорость (5 мин):</strong> те же фазы, но второй вратарь бежит в игровом темпе. После каждого — пауза 10 сек, вратарь сама называет фазу, которую удалось выполнить правильно. × 3 эпизода на каждую. Не больше — качество важнее.</div></div>
               </div>
-              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">Нерешительность при выходе 1в1 — главная ошибка. Либо чётко выходить, либо чётко оставаться. Полушагов нет.</span></div>
+              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">Главная цель этого упражнения — не поймать мяч, а объяснить своё решение. Вратарь которая понимает почему — будет делать правильно и в матче.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
+
+          <!-- АНТИЦИПАЦИЯ -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">перед заминкой</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Антиципация — серия с разных позиций</span>
+              <span class="exercise-tag">Ситуативное</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: мгновенная перестройка при смене угла атаки — без паузы между ударами</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Упражнение «Серия с разных позиций»:</strong> два нападающих (второй вратарь + тренер) стоят в разных точках — один на центре, второй на фланге. Бьют поочерёдно без паузы: первый ударил — вратарь отбила и сразу перестраивается под второго. Вратарь не знает кто бьёт следующим. × 2–3 серии по 8–10 ударов. Пауза между сериями 20 сек.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">Это упражнение тренирует не скорость — а переключение внимания. После каждого отбива — взгляд быстро на второй источник угрозы. Не думать, где первый мяч: он уже улетел.</span></div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
+
+          <!-- СКР -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">заминка</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">СКР — самоконтроль и саморегуляция</span>
+              <span class="exercise-tag">Психология</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">15–20 секунд: проверяем состояние тела и возвращаемся в рабочий режим</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>После завершения работы:</strong> встать, остановиться на 15–20 секунд. Задать себе три вопроса: «Мышцы — зажаты или расслаблены?», «Дыхание — ровное или задержанное?», «Выражение лица — напряжённое или нейтральное?»</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Если есть напряжение:</strong> расслабить мышцы (встряхнуть руки и плечи), улыбнуться — это физически снимает мышечный тонус лица, затем 2–3 глубоких вдоха с удлинённым выдохом: вдох 3 сек → выдох 5 сек.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Ритмичное дыхание (если нужно):</strong> вдох → задержка 2 сек → выдох длиннее вдоха. Повторить 3–4 раза. Это сигнал нервной системе: «ситуация под контролем». Навык применять и в матче — особенно после пропущенного гола.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">СКР — это не расслабление, это управление. Вратарь которая умеет быстро вернуться в рабочее состояние — стабильнее на протяжении всей игры.</span></div>
             <div class="notes-section">
       <button class="add-note-btn" onclick="openNoteForm(this)">
         <span>📌</span> Добавить пометку
@@ -1496,8 +1906,34 @@ body:not(.can-edit) .note-del{display:none!important}
         <!-- В3 Четверг -->
         <div class="session-card" id="w3-chet">
           <div class="session-head">
-            <div><div class="session-day">Четверг</div><div class="session-type">Игровой режим</div><div class="session-date">8 октября 2026</div></div>
+            <div><div class="session-day">Четверг</div><div class="session-type">Качество — чтение игры и детали</div><div class="session-date">8 октября 2026</div></div>
             <div class="session-dur">40 мин</div>
+          </div>
+
+          <!-- ПУНКТ 0 -->
+          <div class="exercise open">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">до начала</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Бег и беговые с полевыми</span>
+              <span class="exercise-tag">Общая работа</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Вратари выполняют общую беговую разминку вместе с командой</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага...">Бег в общем объёме с полевыми игроками: лёгкий бег, ускорения, беговые упражнения (захлёст, высокое бедро, приставной). Темп и объём — по плану тренера команды.</div></div>
+              </div>
+              <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
           </div>
 
           <div class="exercise open">
@@ -1508,7 +1944,7 @@ body:not(.can-edit) .note-del{display:none!important}
               <span class="exercise-chevron">▾</span>
             </div>
             <div class="exercise-body">
-              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Разогрев под игровой интенсивностью</div>
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Осознанный разогрев — неделя на точность и детали</div>
               <div class="steps">
                 <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>3 мин:</strong> суставная гимнастика + растяжка паха лёжа по 30 сек.</div></div>
                 <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>4 мин:</strong> быстрые броски в парах с нарастающим темпом — последнюю минуту максимально быстро.</div></div>
@@ -1528,18 +1964,19 @@ body:not(.can-edit) .note-del{display:none!important}
 
           <div class="exercise">
             <div class="exercise-head" onclick="toggle(this)">
-              <span class="exercise-time">7–27</span>
-              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Свободная атака тренера</span>
-              <span class="exercise-tag">Основное</span>
+              <span class="exercise-time">7–22</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Стойка и позиция — разбор по фазам</span>
+              <span class="exercise-tag">Технически сложное</span>
               <span class="exercise-chevron">▾</span>
             </div>
             <div class="exercise-body">
-              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: работа в условиях неизвестности — как в матче</div>
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: точная стойка в каждой позиции ворот — угол, центр, выход на фланг</div>
               <div class="steps">
-                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>10 мин на каждую:</strong> тренер атакует вратаря без пауз — бьёт, навешивает, катит, имитирует добивание. Вратарь не знает что будет. Никаких подсказок.</div></div>
-                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>После каждой смены:</strong> вратарь сам называет одну вещь, которая получилась. Не тренер — он сам.</div></div>
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Фаза 1 — центральная позиция (5 мин):</strong> тренер ставит вратаря в центр ворот и поправляет: положение стоп (на ширине плеч, носки чуть наружу), угол тела (чуть вперёд), положение рук (на уровне поясницы, готовы к движению). Тренер бьёт медленно в разные зоны — вратарь после каждого мяча возвращается точно в исходную позицию.</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Фаза 2 — угловая позиция (5 мин):</strong> мяч на фланге у тренера. Вратарь занимает позицию относительно линии ворот и угла атаки. Тренер показывает на правильный вес (носки, не пятки) и точку взгляда (на мяч, краем — на штангу). Разбираем каждую корректировку вслух.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Фаза 3 — перестановка (5 мин):</strong> тренер перекатывает мяч из центра на фланг и обратно. Вратарь перемещается и каждый раз занимает правильную позицию. Акцент: приставной шаг, не скрестный — контроль тела. × 4 смены позиции на каждую. После каждой смены — пауза, тренер проверяет.</div></div>
               </div>
-              <div class="tip"><span class="tip-icon">💡</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">Тренер на этой тренировке не останавливает и не комментирует во время работы. Только после смены.</span></div>
+              <div class="tip"><span class="tip-icon">⚠️</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">Качественная стойка — это не один раз показать, это привычка тела. На этой неделе замедляем и закрепляем каждую деталь.</span></div>
             <div class="notes-section">
       <button class="add-note-btn" onclick="openNoteForm(this)">
         <span>📌</span> Добавить пометку
@@ -1555,17 +1992,47 @@ body:not(.can-edit) .note-del{display:none!important}
 
           <div class="exercise">
             <div class="exercise-head" onclick="toggle(this)">
-              <span class="exercise-time">27–40</span>
-              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Противодействие длинным передачам</span>
-              <span class="exercise-tag">Основное</span>
+              <span class="exercise-time">22–40</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">Чтение атаки по замаху — трёхступенчатый анализ</span>
+              <span class="exercise-tag">Технически сложное</span>
               <span class="exercise-chevron">▾</span>
             </div>
             <div class="exercise-body">
-              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: чтение ситуации по замаху, принятие решения за 1 сек</div>
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">Упор: читать направление до удара — по опорной ноге, корпусу и замаху</div>
               <div class="steps">
-                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Три сценария вразнобой:</strong> заброс за спину защиты (вратарь выбегает, выбивает ногой), навес в штрафную (выход + ловля в воздухе), заброс на ход второму вратарю (выход 1в1).</div></div>
-                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Тренер чередует без предупреждения.</strong> Вратарь читает по замаху. × 6 эпизодов на каждую.</div></div>
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Разбор без мяча (5 мин):</strong> тренер объясняет три сигнала — (1) опорная нога: куда носок, туда мяч, (2) корпус: разворот тела подсказывает зону, (3) замах: открытая стопа — удар навесом или в дальний угол. Вратарь повторяет устно.</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Упражнение «Стоп-кадр» (8 мин):</strong> второй вратарь делает замах — первая вратарь кричит куда полетит мяч ДО удара: «низ право», «верх центр» и т.д. После — мяч бьётся. Оцениваем точность прогноза, не защиты. × 6 ударов каждой.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Применение в игре (5 мин):</strong> те же удары, но теперь вратарь реагирует — читает и тянется в нужную сторону. Акцент: начало движения ДО удара, не после. Тренер может специально обмануть — вратарь должна держать позицию до последнего. × 4 удара каждой.</div></div>
               </div>
+            <div class="notes-section">
+      <button class="add-note-btn" onclick="openNoteForm(this)">
+        <span>📌</span> Добавить пометку
+      </button>
+      <div class="note-form">
+        <textarea class="note-textarea" placeholder="Пометка по ходу тренировки..."></textarea>
+        <div class="note-actions">
+          <button class="note-cancel" onclick="closeNoteForm(this)">Отмена</button>
+          <button class="note-save" onclick="saveNote(this)">Сохранить</button>
+        </div>
+      </div></div></div>
+          </div>
+
+          <!-- СКР -->
+          <div class="exercise">
+            <div class="exercise-head" onclick="toggle(this)">
+              <span class="exercise-time">заминка</span>
+              <span class="exercise-name" data-editable="" contenteditable="false" data-placeholder="Название упражнения...">СКР — самоконтроль и саморегуляция</span>
+              <span class="exercise-tag">Психология</span>
+              <span class="exercise-chevron">▾</span>
+            </div>
+            <div class="exercise-body">
+              <div class="focus-bar" data-editable="" contenteditable="false" data-placeholder="Фокус упражнения...">15–20 секунд: проверяем состояние тела и возвращаемся в рабочий режим</div>
+              <div class="steps">
+                <div class="step"><div class="step-n">1</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>После завершения работы:</strong> встать, остановиться на 15–20 секунд. Задать себе три вопроса: «Мышцы — зажаты или расслаблены?», «Дыхание — ровное или задержанное?», «Выражение лица — напряжённое или нейтральное?»</div></div>
+                <div class="step"><div class="step-n">2</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Если есть напряжение:</strong> расслабить мышцы (встряхнуть руки и плечи), улыбнуться — это физически снимает мышечный тонус лица, затем 2–3 глубоких вдоха с удлинённым выдохом: вдох 3 сек → выдох 5 сек.</div></div>
+                <div class="step"><div class="step-n">3</div><div class="step-text" data-editable="" contenteditable="false" data-placeholder="Текст шага..."><strong>Ритмичное дыхание (если нужно):</strong> вдох → задержка 2 сек → выдох длиннее вдоха. Повторить 3–4 раза. Это сигнал нервной системе: «ситуация под контролем». Навык применять и в матче — особенно после пропущенного гола.</div></div>
+              </div>
+              <div class="tip"><span class="tip-icon">🧠</span><span data-editable="" contenteditable="false" data-placeholder="Подсказка...">СКР — это не расслабление, это управление. Вратарь которая умеет быстро вернуться в рабочее состояние — стабильнее на протяжении всей игры.</span></div>
             <div class="notes-section">
       <button class="add-note-btn" onclick="openNoteForm(this)">
         <span>📌</span> Добавить пометку
